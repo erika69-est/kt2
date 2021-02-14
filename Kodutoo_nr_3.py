@@ -66,11 +66,13 @@ def jukebox(plaat):
     nr=int(input("Millist lugu soovid: "))
     print(f"Valitud lugu on {palad[nr-1]}")
 
-print("Meie muusikavalik on selline: ")
-for m in range(len(muusika)):
-    print(muusika[m])
-plaat=input("Sisesta oma valik: ")
-jukebox(plaat)
+jvastus="J"
+while jvastus=="J":
+    print("Meie muusikavalik on selline: ")
+    for m in range(len(muusika)):
+        print(muusika[m])
+    plaat=input("Sisesta oma valik: ")
+    jukebox(plaat)
 
 #3.5 Tahvli juurde
 
