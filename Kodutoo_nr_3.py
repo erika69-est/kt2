@@ -1,8 +1,9 @@
 #Iseseisev töö nr 3
 #Erika Laherand ITT20
 #14.02.2021
-"""
+
 #3.1 Ülikooli vastuvõetud
+print("***************Ülikooli vastuvõetud******************")
 fail=open("rebased.txt",encoding="UTF-8")
 vastuvoetud=[]
 vastus="J"
@@ -21,9 +22,10 @@ while vastus=="J":
     valjasta()
     vastus=input("Kas soovite veel andmeid (J/E): ")
     vastus=vastus.upper()
+print("")
 
 #3.2 Jänesevanemate mure ver. 3    
-
+print("**********Jänesevanemad ver 3************")
 def ringid(ringe):
     porgand=0
     for loendur in range(ringe+1):
@@ -41,18 +43,23 @@ while vastus=="J":
         print("Ringide arv peab olema positiivne täisarv")
     vastus=input("Kas soovid veel proovida (J/E): ")
     vastus=vastus.upper()
+print("")
 
 #3.3 Sissetulekud
+print("************Konto sissetulekud*************")
 failk=open("konto.txt",encoding="UTF-8")
 tehingud=[]
 for rida in failk:  
     tehingud.append(float(rida))
 failk.close()
+print("Konto sissetulekud on: ")
 for i in range(len(tehingud)):
     if tehingud[i]>0:
          print(tehingud[i])
-"""
+print("")
+
 #3.4 Jukebox
+print("***********Jukebox************")
 muusika=["jukebox.txt","80ndad.txt","eesti_muusika.txt","edm.txt"]
 
 def jukebox(plaat):
@@ -73,9 +80,12 @@ while jvastus=="J":
         print(muusika[m])
     plaat=input("Sisesta oma valik: ")
     jukebox(plaat)
+    jvastus=input("Kas soovid veel lugusid kuulata (J/E): ")
+    jvastus=jvastus.upper()
+print("")
 
 #3.5 Tahvli juurde
-
+print("************Tahvli juurde*************")
 from datetime import *
 kuup=datetime.now().day
 loend=[]
